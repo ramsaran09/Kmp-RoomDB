@@ -23,6 +23,8 @@ navigation = "2.7.0-alpha07"
 lifecycleViewModel = "2.8.7"
 kmpNativeCoroutines = "1.0.0-ALPHA-37"
 datastore = "1.1.2"
+mockk = "1.13.10"
+kotlinx-coroutines-test = "1.8.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -50,6 +52,8 @@ koin-composeVM = { module = "io.insert-koin:koin-compose-viewmodel", version.ref
 navigation-compose = { group = "org.jetbrains.androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
 datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
 datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+mockk-common = { module = "io.mockk:mockk-common", version.ref = "mockk" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-coroutines-test" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
