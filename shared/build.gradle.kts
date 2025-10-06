@@ -42,6 +42,13 @@ kotlin {
             implementation(libs.datastore)
             implementation(libs.datastore.preferences)
         }
+        val iosMain by creating {
+            dependsOn(commonMain.get())
+            dependencies {
+                // Add Koin core dependency for iOS
+                api(libs.koin.core)
+            }
+        }
         androidMain.dependencies {
             implementation(libs.koin.android)
             implementation(libs.koin.androidx.compose)
@@ -49,6 +56,11 @@ kotlin {
             implementation(libs.lifecycle.viewmodel)
             implementation(libs.room.runtime.android)
 
+        }
+        commonTest.dependencies {
+            implementation(kotlin("test"))
+            implementation(libs.mockk.common)
+            implementation(libs.kotlinx.coroutines.test)
         }
     }
 }
